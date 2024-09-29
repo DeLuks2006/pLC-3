@@ -17,3 +17,7 @@ fully in C by following the tutorial on
 ## Changes:
 
 ...
+
+## Reversing:
+
+This is a little section to place a list of techniques we can use to dump the payload/file being ran by the VM and then disassemble it.
