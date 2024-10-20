@@ -11,3 +11,7 @@ debug:
 
 clean:
 	rm $(OUT)
+
+cursed:
+	clang $(IN) -o CLANG-$(OUT) $(CFLAGS) -Ofast
+	strip CLANG-$(OUT)
