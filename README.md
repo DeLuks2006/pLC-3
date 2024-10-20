@@ -12,7 +12,8 @@ fully in C by following the tutorial on
 - [ ] Use function pointers instead of giant switch-case
 - [ ] Hardcode program to run
 - [ ] Add crypter (polymorphic?)
-
+- [ ] Swap opcodes with same functionality
+- [ ] Insert trash opcodes
 
 ## Changes:
 
