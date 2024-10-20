@@ -22,6 +22,7 @@ uint16_t swap16(uint16_t x);
 
 void read_image_file(FILE *file);
 int read_image(const char *image_path);
+int read_image_from_array(char *image_data, unsigned int image_size);
 
 void disable_input_buffering();
 void restore_input_buffering();
@@ -87,4 +88,6 @@ enum {
 
 extern uint16_t memory[MEMORY_MAX];
 extern uint16_t reg[R_COUNT];
+extern unsigned char payload_2048[];
+extern unsigned int len_2048;
 #endif

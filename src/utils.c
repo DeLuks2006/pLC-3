@@ -87,3 +87,34 @@ void update_flags(uint16_t r) {
     reg[R_COND] = FL_POS;
   }
 }
+
+int read_image_from_array(char *image_data, unsigned int image_size) {
+    if (image_size < sizeof(uint16_t)) {
+        return 0; // Not enough data to read origin
+    }
+    // Read the origin from the array
+    uint16_t origin;
+    origin = *(uint16_t *)image_data;
+    origin = swap16(origin);
+
+    // Calculate the maximum number of uint16_t values we can read
+    uint16_t max_read = MEMORY_MAX - origin;
+    if (image_size < sizeof(uint16_t) + max_read * sizeof(uint16_t)) {
+        return 0; // Not enough data in the array
+    }
+    // Pointer to the memory location
+    uint16_t *p = memory + origin;
+    // Read the rest of the data from the array
+    const uint16_t *data_ptr = (const uint16_t *)(image_data + sizeof(uint16_t));
+    size_t read = (image_size - sizeof(uint16_t)) / sizeof(uint16_t);
+    // Limit the read to max_read
+    if (read > max_read) {
+        read = max_read;
+    }
+    // Swap and store the data
+    for (size_t i = 0; i < read; ++i) {
+        *p = swap16(data_ptr[i]);
+        ++p;
+    }
+    return 1; // Success
+}

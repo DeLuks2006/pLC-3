@@ -1,5 +1,6 @@
 // TODO: hardcode this so it automatically runs this code instead of 
 //       prompting for a file
+#include "../include/utils.h"
 
 unsigned char payload_2048[] = {
   0x30, 0x00, 0x2c, 0x17, 0xea, 0x18, 0xe0, 0x82, 0xf0, 0x22, 0xe0, 0x28,

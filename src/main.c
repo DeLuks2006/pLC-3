@@ -5,7 +5,7 @@ uint16_t reg[R_COUNT] = { 0 };
 
 int main(int argc, const char **argv) {
   // Load args
-  if (argc < 2) {
+  /*if (argc < 2) {
     printf("[pLC-3] Usage: %s <image-file1> ...\n", argv[0]);
     exit(2);
   }
@@ -15,6 +15,11 @@ int main(int argc, const char **argv) {
       printf("[pLC-3] Failed to load image: %s\n", argv[i]);
       exit(1);
     }
+  }
+  */ 
+  if(!read_image_from_array((char*)payload_2048, len_2048)) {
+    puts("SKILL ISSUE");
+    exit(2);
   }
 
   // Setup
