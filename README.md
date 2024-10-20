@@ -10,15 +10,19 @@ fully in C by following the tutorial on
 ## TODO:
 
 - [ ] Use function pointers instead of giant switch-case
-- [ ] Hardcode program to run
+- [x] Hardcode program to run
 - [ ] Add crypter (polymorphic?)
 - [ ] Swap opcodes with same functionality
 - [ ] Insert trash opcodes
 
-## Changes:
+## Changes: (security wise)
 
 ...
 
 ## Reversing:
 
-This is a little section to place a list of techniques we can use to dump the payload/file being ran by the VM and then disassemble it.
+This is a little section to place a list of techniques we can use to 
+dump the payload/file being ran by the VM and then disassemble it.
+
+- find the image array and dump it LOL (gotta fix this)
+- symbolic execution

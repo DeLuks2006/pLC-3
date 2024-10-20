@@ -1,6 +1,6 @@
 CC = gcc
 CFLAGS = -Wall -Wshadow -Wextra
-IN = src/main.c src/utils.c
+IN = src/*.c
 OUT = pLC-3
 
 all:
