@@ -9,7 +9,7 @@ fully in C by following the tutorial on
 
 ## TODO:
 
-- [ ] Use function pointers instead of giant switch-case
+- [ ] (WIP) Use function pointers instead switch-case (lookup table)
 - [x] Hardcode program to run
 - [ ] Add crypter (polymorphic?)
 - [ ] Swap opcodes with same functionality

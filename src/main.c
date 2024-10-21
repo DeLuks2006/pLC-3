@@ -1,4 +1,54 @@
 #include "../include/utils.h"
+/*
+typedef void (*OpcodeHandler)();
+
+void op_br();
+void op_add();
+void op_ld();
+void op_st();
+void op_jsr();
+void op_and();
+void op_ldr();
+void op_str();
+void op_rti();
+void op_not();
+void op_ldi();
+void op_sti();
+void op_jmp();
+void op_res();
+void op_lea();
+void op_trap();
+
+OpcodeHandler opcodeHandlers[16] = {
+  op_br,
+  op_add,
+  op_ld,
+  op_st,
+  op_jsr,
+  op_and,
+  op_ldr,
+  op_str,
+  op_rti,
+  op_not,
+  op_ldi,
+  op_sti,
+  op_jmp,
+  op_res,
+  op_lea,
+  op_trap
+};
+
+void exec_opcodes(int opcode) {
+  if (opcode >= 0 && opcode < R_COUNT) {
+    opcodeHandlers[opcode]();
+  } else {
+    printf("[x] Encountered Invalid opcode: %04x", opcode);
+    fflush(stdout);
+    restore_input_buffering();
+    abort();
+  }
+}
+*/
 
 uint16_t memory[MEMORY_MAX] = { 0 };
 uint16_t reg[R_COUNT] = { 0 };
@@ -193,4 +243,3 @@ int main(void) {
   }
   restore_input_buffering();
 }
-
