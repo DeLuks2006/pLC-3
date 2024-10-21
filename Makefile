@@ -7,7 +7,7 @@ all:
 	$(CC) $(IN) -o $(OUT) $(CFLAGS)
 
 debug:
-	$(CC) $(IN) -o $(OUT) $(CFLAGS) -g
+	$(CC) $(IN) -o DEBUG-$(OUT) $(CFLAGS) -g
 
 clean:
 	rm $(OUT)
